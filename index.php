@@ -18,7 +18,7 @@ $allow_show_folders = true; // Set to false to hide all subdirectories
 
 $disallowed_patterns = ['*.php'];  // must be an array.  Matching files not allowed to be uploaded
 $hidden_patterns = ['*.php','.*']; // Matching files hidden in directory index
-
+                 
 $PASSWORD = 'password';  // Set the password, to access the file manager... (optional)
 
 if($PASSWORD) {
@@ -444,7 +444,7 @@ $(function(){
 		return $html;
 	}
 	function formatTimestamp(unix_timestamp) {
-		var m = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+		var m = ['January', 'February', 'March', 'Apri', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 		var d = new Date(unix_timestamp*1000);
 		return [m[d.getMonth()],' ',d.getDate(),', ',d.getFullYear()," ",
 			(d.getHours() % 12 || 12),":",(d.getMinutes() < 10 ? '0' : '')+d.getMinutes(),
