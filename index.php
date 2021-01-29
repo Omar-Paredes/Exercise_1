@@ -466,9 +466,13 @@ $(function(){
 		<label for=dirname>Create New Folder</label><input id=dirname type=text name=name value="" />
 		<input type="submit" value="create" />
 	</form>
-
    <?php endif; ?>
-
+   <?php if($file='FileToBeRenamed.txt'): ?>
+   <form action="?" method="post">
+        if(rename($file, 'FileRenamed.txt'))
+        <button>Rename</button>
+    </form>
+ 	<?php endif; ?>
    <?php if($allow_upload): ?>
 
 	<div id="file_drop_target">
@@ -479,7 +483,6 @@ $(function(){
    <?php endif; ?>
 	<div id="breadcrumb">&nbsp;</div>
 </div>
-
 <div id="upload_progress"></div>
 <table id="table"><thead><tr>
 	<th>Name</th>
@@ -488,6 +491,7 @@ $(function(){
 	<th>Permissions</th>
 	<th>Actions</th>
 </tr></thead><tbody id="list">
+
 
 </tbody></table>
 <footer>simple php filemanager by <a href="https://github.com/jcampbell1">jcampbell1</a></footer>
